@@ -1,0 +1,8 @@
+C:\Users\Youcode\Desktop\c#\WebApiItNews\ItNews.Logique\bin\Debug\netstandard2.0\ItNews.Logique.deps.json
+C:\Users\Youcode\Desktop\c#\WebApiItNews\ItNews.Logique\bin\Debug\netstandard2.0\ItNews.Logique.dll
+C:\Users\Youcode\Desktop\c#\WebApiItNews\ItNews.Logique\obj\Debug\netstandard2.0\ItNews.Logique.AssemblyInfoInputs.cache
+C:\Users\Youcode\Desktop\c#\WebApiItNews\ItNews.Logique\obj\Debug\netstandard2.0\ItNews.Logique.AssemblyInfo.cs
+C:\Users\Youcode\Desktop\c#\WebApiItNews\ItNews.Logique\bin\Debug\netstandard2.0\ItNews.Logique.pdb
+C:\Users\Youcode\Desktop\c#\WebApiItNews\ItNews.Logique\obj\Debug\netstandard2.0\ItNews.Logique.csprojAssemblyReference.cache
+C:\Users\Youcode\Desktop\c#\WebApiItNews\ItNews.Logique\obj\Debug\netstandard2.0\ItNews.Logique.dll
+C:\Users\Youcode\Desktop\c#\WebApiItNews\ItNews.Logique\obj\Debug\netstandard2.0\ItNews.Logique.pdb

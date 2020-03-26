@@ -1,0 +1,11 @@
+C:\Users\Youcode\Desktop\c#\WebApiItNews\WebApiItNews.Data\bin\Debug\WebApiItNews.Data.dll
+C:\Users\Youcode\Desktop\c#\WebApiItNews\WebApiItNews.Data\bin\Debug\WebApiItNews.Data.pdb
+C:\Users\Youcode\Desktop\c#\WebApiItNews\WebApiItNews.Data\obj\Debug\WebApiItNews.Data.dll
+C:\Users\Youcode\Desktop\c#\WebApiItNews\WebApiItNews.Data\obj\Debug\WebApiItNews.Data.pdb
+C:\Users\Youcode\Desktop\c#\WebApiItNews\WebApiItNews.Data\bin\Debug\WebApiItNews.Data.dll.config
+C:\Users\Youcode\Desktop\c#\WebApiItNews\WebApiItNews.Data\bin\Debug\EntityFramework.dll
+C:\Users\Youcode\Desktop\c#\WebApiItNews\WebApiItNews.Data\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Youcode\Desktop\c#\WebApiItNews\WebApiItNews.Data\bin\Debug\EntityFramework.xml
+C:\Users\Youcode\Desktop\c#\WebApiItNews\WebApiItNews.Data\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Youcode\Desktop\c#\WebApiItNews\WebApiItNews.Data\bin\Debug\fr\EntityFramework.resources.dll
+C:\Users\Youcode\Desktop\c#\WebApiItNews\WebApiItNews.Data\obj\Debug\WebApiItNews.Data.csproj.CopyComplete

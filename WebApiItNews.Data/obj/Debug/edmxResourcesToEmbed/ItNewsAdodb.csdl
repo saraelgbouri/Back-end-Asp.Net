@@ -1,0 +1,154 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="ItNewsModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="Api">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Img" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="Lien" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="Article">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="CategorieID" Type="Int32" />
+    <Property Name="JournalistesID" Type="Int32" Nullable="false" />
+    <Property Name="Date" Type="DateTime" Precision="3" />
+    <Property Name="Titre" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="Status" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="Body" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="Img" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="Journalistes" Relationship="Self.FKArticle595439" FromRole="Article" ToRole="Journalistes" />
+    <NavigationProperty Name="Categorie" Relationship="Self.FKArticle668536" FromRole="Article" ToRole="Categorie" />
+    <Property Name="video" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="Commentaire" Relationship="ItNewsModel.FKCommentair387374" FromRole="Article" ToRole="Commentaire" />
+  </EntityType>
+  <EntityType Name="Categorie">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Titre" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="Article" Relationship="Self.FKArticle668536" FromRole="Categorie" ToRole="Article" />
+  </EntityType>
+  <EntityType Name="Gestionner">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="Tele" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="Email" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="UserName" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="Password" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="Journalistes">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Nom" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="Prenom" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="Statu" Type="Boolean" />
+    <Property Name="Tele" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="Image" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="Email" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="UserName" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="Mdp" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="Article" Relationship="Self.FKArticle595439" FromRole="Journalistes" ToRole="Article" />
+  </EntityType>
+  <EntityType Name="Pub">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Img" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="Titre" Type="Int32" />
+    <Property Name="Url" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="RedacteurEnChef">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Email" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="Nom" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="Prenom" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="Statu" Type="Boolean" Nullable="false" />
+    <Property Name="Image" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="Tele" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="Username" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="Mdp" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <Association Name="FKArticle595439">
+    <End Role="Journalistes" Type="Self.Journalistes" Multiplicity="1" />
+    <End Role="Article" Type="Self.Article" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Journalistes">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="Article">
+        <PropertyRef Name="JournalistesID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FKArticle668536">
+    <End Role="Categorie" Type="Self.Categorie" Multiplicity="0..1" />
+    <End Role="Article" Type="Self.Article" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Categorie">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="Article">
+        <PropertyRef Name="CategorieID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="ItNewsEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Api" EntityType="Self.Api" />
+    <EntitySet Name="Article" EntityType="Self.Article" />
+    <EntitySet Name="Categorie" EntityType="Self.Categorie" />
+    <EntitySet Name="Gestionner" EntityType="Self.Gestionner" />
+    <EntitySet Name="Journalistes" EntityType="Self.Journalistes" />
+    <EntitySet Name="Pub" EntityType="Self.Pub" />
+    <EntitySet Name="RedacteurEnChef" EntityType="Self.RedacteurEnChef" />
+    <AssociationSet Name="FKArticle595439" Association="Self.FKArticle595439">
+      <End Role="Journalistes" EntitySet="Journalistes" />
+      <End Role="Article" EntitySet="Article" />
+    </AssociationSet>
+    <AssociationSet Name="FKArticle668536" Association="Self.FKArticle668536">
+      <End Role="Categorie" EntitySet="Categorie" />
+      <End Role="Article" EntitySet="Article" />
+    </AssociationSet>
+    <EntitySet Name="Commentaire" EntityType="ItNewsModel.Commentaire" />
+    <AssociationSet Name="FKCommentair387374" Association="ItNewsModel.FKCommentair387374">
+      <End Role="Article" EntitySet="Article" />
+      <End Role="Commentaire" EntitySet="Commentaire" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="Commentaire">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="ArticleID" Type="Int32" />
+    <Property Name="Contenu" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="User_mail" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="User_name" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="Article" Relationship="ItNewsModel.FKCommentair387374" FromRole="Commentaire" ToRole="Article" />
+  </EntityType>
+  <Association Name="FKCommentair387374">
+    <End Type="ItNewsModel.Article" Role="Article" Multiplicity="0..1" />
+    <End Type="ItNewsModel.Commentaire" Role="Commentaire" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Article">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="Commentaire">
+        <PropertyRef Name="ArticleID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+</Schema>

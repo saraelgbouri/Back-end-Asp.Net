@@ -1,0 +1,5 @@
+C:\Users\Youcode\Desktop\c#\WebApiItNews\ItNews.Data\bin\Debug\netstandard2.0\ItNews.Data.deps.json
+C:\Users\Youcode\Desktop\c#\WebApiItNews\ItNews.Data\bin\Debug\netstandard2.0\ItNews.Data.dll
+C:\Users\Youcode\Desktop\c#\WebApiItNews\ItNews.Data\obj\Debug\netstandard2.0\ItNews.Data.csprojAssemblyReference.cache
+C:\Users\Youcode\Desktop\c#\WebApiItNews\ItNews.Data\obj\Debug\netstandard2.0\ItNews.Data.AssemblyInfoInputs.cache
+C:\Users\Youcode\Desktop\c#\WebApiItNews\ItNews.Data\obj\Debug\netstandard2.0\ItNews.Data.AssemblyInfo.cs
